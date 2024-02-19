@@ -1,0 +1,13 @@
+{% extends "base.html.twig"%}
+{% block title %}
+Name Page
+{% endblock %}
+{% block body %}
+{% for names in student_management %}
+<li>{{ names.firstName }} {{ names.lastName }}</li> {# Assuming you want to display the first and last names of the students #}
+{% endfor %}
+{% if app.user %}
+    {{ app.user.email }}
+{% endif %}
+
+{% endblock %}
